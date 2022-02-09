@@ -11,6 +11,7 @@
     <modules>
         <module>Files</module>
         <module>Hacking</module>
+        <module>Logging</module>
     </modules>
     <properties>
         <spring-boot.version>2.6.1</spring-boot.version>

@@ -13,6 +13,7 @@
         <module>Hacking</module>
         <module>Logging</module>
         <module>Time</module>
+      <module>Interview</module>
     </modules>
     <properties>
         <spring-boot.version>2.6.1</spring-boot.version>

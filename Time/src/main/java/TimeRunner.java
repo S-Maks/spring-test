@@ -1,10 +1,16 @@
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 
 public class TimeRunner {
     public static void main(String[] args) {
-        System.out.println(getTime());
+        //get formatted date
+        //System.out.println(getTime());
+
+        //parse date
+        date();
     }
 
     private static ZonedDateTime getTime() {
@@ -12,5 +18,11 @@ public class TimeRunner {
                 .parse(ZonedDateTime
                         .now(ZoneId.of("Europe/Moscow"))
                         .format(DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ssXXX")));
+    }
+
+    private static void date() {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("d/M/yy");
+        String filterValue = "1/10/1";
+        System.out.println(formatter.parse(filterValue, LocalDate::from));
     }
 }
